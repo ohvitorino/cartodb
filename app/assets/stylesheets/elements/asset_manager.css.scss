@@ -17,6 +17,9 @@
       margin-bottom:30px;
 
       label {
+        position:relative;
+        top:auto;
+        text-align:left;
         font-weight:bold;
         font-size:11px;
         color: #CCCCCC;
@@ -25,6 +28,7 @@
 
       ul.assets-list {
         position:relative;
+        left:auto; right:auto; top:auto;
         display:block;
         height:auto;
         margin:10px 0 0 0;
@@ -119,9 +123,5 @@
       padding:28px 0 20px;
       @include background(image-url('layout/loader.gif') no-repeat center top);
       p {text-align:center;}
-    }
-
-    div.assets-list {
-      display:none;
     }
   }
