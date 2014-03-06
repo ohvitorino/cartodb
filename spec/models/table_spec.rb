@@ -556,7 +556,7 @@ describe Table do
       id = table.table_visualization.id
       CartoDB::Varnish.any_instance.expects(:purge)
         .times(2)
-        .with("#{id}:vizjson")
+        .with(".*#{id}:vizjson")
         .returns(true)
 
       CartoDB::Table::PrivacyManager.any_instance
