@@ -1,5 +1,11 @@
 namespace :resque do
 
+  desc "On setup"
+  task "resque:setup" => :environment do
+    ENV['QUEUE'] = '*'
+    Resque.after_fork = Proc.new { ActiveRecord::Base.establish_connection }
+  end
+
   desc "Quit running workers"
   task :stop_workers => :environment do
     pids = []
