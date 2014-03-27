@@ -46,3 +46,4 @@ notifications:
     channels:
       - "irc.freenode.org#cartodb"
     use_notice: true
+
