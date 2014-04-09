@@ -2,6 +2,8 @@
 require 'sequel'
 require 'fileutils'
 require 'uuidtools'
+require 'table_registrar'
+require 'quota_checker'
 require_relative './user'
 require_relative './table'
 require_relative '../../lib/cartodb/errors'
